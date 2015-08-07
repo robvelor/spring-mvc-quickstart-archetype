@@ -9,8 +9,6 @@ Generated project characteristics
 -------------------------
 * No-xml Spring MVC 4 web application for Servlet 3.0 environment
 * Thymeleaf, Bootstrap
-* JPA 2.0 (Hibernate/HSQLDB/Spring Data JPA)
-* MongoDB (Spring Data Mongo)
 * JUnit/Mockito
 * Spring Security 3.2
 
@@ -20,7 +18,7 @@ Installation
 To install the archetype in your local repository execute following commands:
 
 ```bash
-    git clone https://github.com/kolorobot/spring-mvc-quickstart-archetype.git
+    git clone https://github.com/robvelor/spring-mvc-quickstart-archetype.git
     cd spring-mvc-quickstart-archetype
     mvn clean install
 ```
@@ -50,7 +48,6 @@ Test on the browser
 
 	http://localhost:8080/
 
-Note: No additional services are required in order to start the application. Mongo DB configuration is in place but it is not used in the code.
 
 Creating a new project in Eclipse
 ----------------------------------
