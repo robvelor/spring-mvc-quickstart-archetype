@@ -21,7 +21,7 @@ public class UserAuthenticationIntegrationTest extends WebSecurityConfigurationA
 
     @Test
     public void requiresAuthentication() throws Exception {
-        mockMvc.perform(get("/account/current"))
+        mockMvc.perform(get("/users/1"))
                 .andExpect(redirectedUrl("http://localhost/signin"));
     }
 
@@ -35,7 +35,7 @@ public class UserAuthenticationIntegrationTest extends WebSecurityConfigurationA
                 Assert.assertEquals(securityContext.getAuthentication().getName(), username);
             }
         };
-        mockMvc.perform(post("/authenticate").param("username", username).param("password", "demo"))
+        mockMvc.perform(post("/authenticate").param("username", username).param("password", "password"))
                 .andExpect(redirectedUrl("/"))
                 .andExpect(matcher);
     }
